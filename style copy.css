@@ -1,0 +1,17 @@
+.heading {
+    color: blue;
+}
+.title {
+    background-color: gray;
+}
+.heading-about {
+    color: orange;
+    font-style: italic ; /* (oblique | normal | italic) */
+    font-variant: normal;/* small-caps | normal*/
+    font-weight: 400; /* (bold | bolder | lighter| 100 | 200); */
+    font-size: 50px; /* (small | medium | large); */
+
+    text-align: right; /* (center | justify | left | right) */
+    text-decoration: none; /* (line-through | overline | underline | none) */
+    text-transform: none; /* (capitalize | lowercase | uppercase) */
+}
