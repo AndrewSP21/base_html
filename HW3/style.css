@@ -1,0 +1,27 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+.header{
+    margin-top: 40px;
+    margin-bottom: 28px;
+}
+.top_info{
+    margin-top: 25px;
+    margin-bottom: 164px;
+}
+.top_h1{
+    margin-top: 56px;
+}
+.top_h4{
+    margin-top: 17px;
+}
+.top_buttons{
+    margin-top: 10px;
+    padding-top: 27px;
+    padding-bottom: 39px;
+}
+.footer_logo{
+    padding-top: 32px;
+    padding-bottom: 33px;
+}
