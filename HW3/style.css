@@ -25,6 +25,9 @@
     margin: 0 auto;
 
 }
+.top2{
+    padding: 100px;
+}
 .img_top{
     width: 610.73px;
     height: auto;
@@ -74,4 +77,98 @@
     display: flex;
     justify-content: space-between;
     padding-top: 97px;
+}
+.benefit{
+    display: grid;
+   /*  gap: 60px; */
+    grid-template-columns: repeat(3,370px);
+    justify-content: center;
+    background: #FFFFFF;
+    margin-bottom: 100px;
+}
+.item{
+    padding: 40px 60px 25px 30px;
+}
+.item_center{
+    background: #FFFFFF;
+    box-shadow: 15px 25px 56px 6px rgba(0, 0, 0, 0.06);
+}
+.h2_benefit{
+    font-size: 24px;
+    line-height: 28px;
+    color: #000000;
+    margin-top: 25px;
+}
+.h3_benefit{
+    font-size: 15px;
+    line-height: 150%;
+    color: #666666;
+    margin-top: 17px;
+}
+.h4_benefit{
+    font-size: 11px;
+    line-height: 150%;
+    color: #000000;
+    margin-top: 25px;
+    margin-bottom: 25px;
+}
+.h1_question{
+    font-size: 45px;
+    line-height: 53px;
+    color: #000000;
+}
+.h3_question{
+    font-size: 16px;
+    line-height: 150%;
+    text-align: center;
+    color: #666666;
+    width: 682px;
+}
+.question{
+    display: grid;
+    justify-items: center;
+    padding-top: 86.49px;
+    padding-bottom: 51.71px;
+    background: #FAFAFA;
+
+}
+.h3_benefit_more{
+    font-size: 15px;
+    line-height: 150%;
+    text-align: center;
+    color: #AAAAAA;
+    margin: 20.68px 30px 36.67px 30px;
+    width: 310px;
+   
+}
+.h2_benefit_more{
+    font-size: 24px;
+    line-height: 28px;
+    color: #000000;
+    text-align: center;
+    margin-top: 23.5px;
+}
+.key_benefit{
+    display: grid;
+    grid-template-columns: repeat(3,370px);
+    gap: 30px;
+    background: #FAFAFA;
+}
+.benefit_botom{
+    background: #F25822;
+    box-shadow: 4px 4px 8px rgba(242, 88, 34, 0.2);
+    border-radius: 50px;
+    width: 150px;
+    height: 47.01px;
+    color: #FFFFFF;
+    font-size: 13px;
+    line-height: 150%;
+    text-align: center;
+    position: relative;
+    left: 50%;
+    transform: translate(-50%, 0);
+}
+.benefit_more{
+    padding-bottom: 47.01px;
+    background: #FFFFFF;
 }
