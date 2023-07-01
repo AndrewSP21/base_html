@@ -12,6 +12,29 @@
   /*  position: relative; */
 }
 
+.filter {
+
+  /*flex-direction: row;
+  height: 134px;
+  margin-left: 1%; */
+  &__summary {
+    display: flex;
+    align-items: center;
+    gap: 11px;
+    /*   flex-direction: row;
+    width: calc(100% / 3);
+     */
+  }
+
+  /* &__right {
+    display: flex;
+    flex-direction: row;
+    width: calc((100% / 3) * 2);
+    gap: 27.98px;
+  } */
+
+}
+
 .header {
   display: flex;
   justify-content: space-evenly;
@@ -54,7 +77,7 @@
   &_left {
     color: $main_color1;
     font-size: 24px;
-    font-family: Lato;
+    font-family: latoblack;
     font-style: normal;
     font-weight: 400;
     line-height: normal;
@@ -64,7 +87,7 @@
 
     color: $main_color4;
     font-size: 14px;
-    font-family: Lato;
+    font-family: latoblack;
     font-style: normal;
     font-weight: 300;
     line-height: normal;
@@ -72,7 +95,7 @@
     &_2 {
       color: $main_color1;
       font-size: 14px;
-      font-family: Lato;
+      font-family: latoblack;
       font-style: normal;
       font-weight: 300;
       line-height: normal;
@@ -140,10 +163,11 @@
 .item_menu {
   color: #6F6E6E;
   font-size: 14px;
-  font-family: Lato;
+  font-family: latoblack;
   font-style: normal;
   font-weight: 400;
   line-height: normal;
+
 
   &_summary {
     display: flex;
@@ -158,8 +182,29 @@
   }
 
   &_1 {
-    display: flex;
+    /* display: flex; */
     margin: 2px 10px;
+    position: absolute;
+
+  }
+
+  &_2 {
+    /* display: flex; */
+    margin: $menu_height 10px;
+    position: absolute;
+
+  }
+
+  &_3 {
+    margin: calc($menu_height * 2) 10px;
+    position: absolute;
+
+  }
+
+  &_4 {
+    margin: calc($menu_height * 3) 10px;
+    position: absolute;
+
   }
 
 }
@@ -323,7 +368,7 @@
 
   &_item1 {
     font-size: 14px;
-    font-family: Lato;
+    font-family: latoblack;
     font-weight: 300;
     color: $main_color1;
   }
@@ -345,7 +390,7 @@
 
   &_item3 {
     font-size: 18px;
-    font-family: Lato;
+    font-family: latoblack;
     font-weight: 300;
     color: $top_font_color;
     margin-bottom: 48.41px;
@@ -353,7 +398,7 @@
 
   &_item4 {
     font-size: 14px;
-    font-family: Lato;
+    font-family: latoblack;
     font-weight: 300;
     color: $top_font_color2;
     margin-bottom: 32.27px;
@@ -369,7 +414,7 @@
 
   &_item5 {
     font-size: 24px;
-    font-family: Lato;
+    font-family: latoblack;
     font-weight: 300;
     color: #f16d7f;
     margin-bottom: 65.04px;
@@ -470,8 +515,12 @@
   margin: 1%;
 
   &_arround {
-    padding-bottom: 128px;
+
     margin-top: 65px;
+  }
+
+  &_product {
+    padding-bottom: 128px;
   }
 
   &_h2 {
@@ -547,6 +596,16 @@
     margin-left: 11.04px;
   }
 
+
+
+}
+
+.butt_bot {
+  position: relative;
+  margin: 48px auto 60px auto;
+  display: flex;
+  @extend %flex-center;
+
   &_bottom {
     font-size: 16px;
     line-height: 19px;
@@ -561,14 +620,6 @@
       background-color: $main_color1;
     }
   }
-
-}
-
-.butt_bot {
-  position: relative;
-  margin: 48px auto 60px auto;
-  display: flex;
-  @extend %flex-center;
 }
 
 .advantage {
@@ -600,6 +651,38 @@
     line-height: 17px;
     text-align: center;
     color: #fbfbfb;
+  }
+}
+
+.page_switch {
+  @extend %flex-center;
+  width: 282.9px;
+  height: 43px;
+  border: 1px solid #EBEBEB;
+  gap: 7px;
+
+  &_item {
+    font-size: 16px;
+    font-family: latoblack;
+    font-style: normal;
+    font-weight: 300;
+    line-height: normal;
+    margin: 5px;
+    color: #929292;
+  }
+
+  &_item:hover {
+    color: #f16d7f;
+  }
+
+  &_edge {
+    color: #000000;
+    font-size: 26px;
+  }
+
+  &_arround {
+    @extend %flex-center;
+    margin: 48.5px auto 96.5px;
   }
 }
 
