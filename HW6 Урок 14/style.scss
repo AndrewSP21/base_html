@@ -12,7 +12,44 @@
   /*  position: relative; */
 }
 
+.filter-sort {
+  height: 67px;
+  position: relative;
+}
+
 .filter {
+  padding: 13px 16px 16px;
+  width: 360px;
+  position: absolute;
+  z-index: 1;
+  top: 39px;
+  box-sizing: border-box;
+
+  &[open] .filter__heading {
+    color: $main_color1;
+  }
+
+  &[open] path {
+    fill: $main_color1;
+  }
+
+  &[open] {
+    background: #FFFFFF;
+    box-shadow: 6px 4px 35px rgba(0, 0, 0, 0.21);
+  }
+
+  &heading {
+    color: #000;
+    font-size: 14px;
+    font-family: latoblack;
+    font-style: normal;
+    font-weight: 600;
+    line-height: normal;
+  }
+
+  &__item {
+    padding: 16px;
+  }
 
   /*flex-direction: row;
   height: 134px;
