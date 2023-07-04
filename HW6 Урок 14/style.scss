@@ -4,6 +4,7 @@
   margin: 0px;
   padding: 0px;
 }
+
 summary {
   display: block;
 }
@@ -11,6 +12,7 @@ summary {
 summary::-webkit-details-marker {
   display: none;
 }
+
 a {
   outline: none;
   text-decoration: none;
@@ -31,6 +33,7 @@ a {
   position: relative;
   display: flex;
   padding-top: 39px;
+  margin-left: 8%;
   /* box-sizing: border-box; */
 
   /*  top: 51px; */
@@ -51,6 +54,7 @@ a {
     /*  position: absolute; */
     /*  z-index: 1; */
   }
+
   &[open] .filter__heading {
     color: $main_color1;
   }
@@ -67,15 +71,16 @@ a {
   &heading {
     color: #000;
     font-size: 14px;
-    font-family: latoblack;
+    font-family: Lato;
     font-style: normal;
     font-weight: 600;
     line-height: normal;
   }
+
   &__head {
     color: #6f6e6e;
     font-size: 14px;
-    font-family: latoblack;
+    font-family: Lato;
     font-style: normal;
     font-weight: 400;
     line-height: normal;
@@ -87,6 +92,7 @@ a {
   &__item {
     padding-bottom: 16px;
   }
+
   &__item[open] .filter__head {
     color: $main_color1;
   }
@@ -97,6 +103,7 @@ a {
     gap: 11px;
     padding: 24px 16px;
   }
+
   &__link {
     color: #6f6e6e;
     font-size: 14px;
@@ -104,6 +111,7 @@ a {
     font-style: normal;
     font-weight: 400;
     line-height: normal;
+
     &:hover {
       color: $main_color1;
     }
@@ -117,6 +125,7 @@ a {
     padding-left: 16px;
   }
 }
+
 .sort {
   padding-top: 12px;
   display: flex;
@@ -126,11 +135,13 @@ a {
   &__details {
     position: relative;
   }
+
   &__summary {
     display: flex;
     align-items: center;
     gap: 10px;
   }
+
   &__check {
     display: flex;
     gap: 9px;
@@ -146,11 +157,12 @@ a {
   &__heading {
     color: #6f6e6e;
     font-size: 14px;
-    font-family: latoblack;
+    font-family: Lato;
     font-style: normal;
     font-weight: 400;
     line-height: normal;
   }
+
   &__box {
     display: flex;
     flex-direction: column;
@@ -163,14 +175,17 @@ a {
     top: 20px;
     min-width: max-content;
   }
+
   /*   display: flex;
   position: absolute;
   gap: 16px;
   left: 490px; */
 }
+
 .box-content {
   overflow: hidden;
 }
+
 .nav {
   background: #fff;
   box-shadow: 6px 4px 35px rgba(0, 0, 0, 0.21);
@@ -183,6 +198,7 @@ a {
   transition: right 0.3s;
   z-index: 22;
 }
+
 .header {
   display: flex;
   justify-content: space-evenly;
@@ -203,6 +219,10 @@ a {
     width: 40%;
   }
 
+  &__left_content img:hover {
+    filter: brightness(40%)
+  }
+
   &__right_content {
     display: flex;
     height: 29px;
@@ -221,42 +241,49 @@ a {
   position: absolute;
   left: -999999px;
   visibility: hidden;
-  &:checked ~ .nav {
-    right: -$widthBurgerMenu;
+
+  &:checked~.nav {
+    right: -$widthBurgerMenu*1000;
   }
 }
+
 .Product_top_content {
   display: flex;
   flex-direction: row;
-  justify-content: space-evenly;
+  /*  justify-content: space-evenly; */
   align-items: center;
   background: $main_color3;
   height: 148px;
   min-width: 375px;
   max-width: $project_max_width;
   justify-content: space-between;
+  padding-left: 10%;
+  padding-right: 10%;
+
 
   &_left {
     color: $main_color1;
     font-size: 24px;
-    font-family: latoblack;
+    font-family: Lato;
     font-style: normal;
     font-weight: 400;
     line-height: normal;
+    padding-left: 8%;
   }
 
   &_right {
     color: $main_color4;
     font-size: 14px;
-    font-family: latoblack;
+    font-family: Lato;
     font-style: normal;
     font-weight: 300;
     line-height: normal;
+    padding-right: 8%;
 
     &_2 {
       color: $main_color1;
       font-size: 14px;
-      font-family: latoblack;
+      font-family: Lato;
       font-style: normal;
       font-weight: 300;
       line-height: normal;
@@ -284,8 +311,183 @@ a {
       background-color: #d2d2d2;
     }
   }
+
   &_item2:hover path {
     fill: $main_color1;
+  }
+}
+
+.product-card {
+  display: flex;
+  flex-direction: row;
+  width: 652px;
+  height: 306px;
+  background-color: #fff;
+  box-shadow: 20px 20px 20px #EAEAEA;
+  margin: 40px;
+  position: relative;
+
+  &__info {
+    margin: 22px auto auto 31px;
+  }
+
+  &__title {
+    margin-bottom: 42px;
+    @include font(#222, 24px, 400);
+
+    max-width: 262px;
+    padding-right: 148px;
+  }
+
+  &__property {
+    display: flex;
+    flex-direction: row;
+  }
+
+  &__property-name {
+    @include font(#575757, 22px, 400);
+  }
+
+  &__property-value {
+    @include font(#575757, 22px, 400);
+
+  }
+
+  &__property-input {
+    @include font(#656565, 18px, 400);
+    border: 1px solid #EAEAEA;
+    width: 44px;
+    line-height: 25px;
+    text-align: center;
+
+  }
+
+  &__sign-close {
+    position: absolute;
+    top: 28px;
+    right: 22px;
+  }
+}
+
+.button-cart {
+  margin: 32px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+
+  &__item {
+    @extend %flex-center;
+    @include font(#000, 14px, 300);
+    width: 235px;
+    height: 50px;
+    border: 1px solid #A4A4A4;
+
+  }
+
+  &__item:hover {
+    background-color: $main_color3;
+  }
+}
+
+.content-basket {
+  display: flex;
+  flex-direction: row;
+}
+
+.content-form {
+  display: flex;
+  flex-direction: column;
+  margin: 40px;
+
+  &__heading {
+    margin-top: 17px;
+    @include font(#222, 16px, 300);
+  }
+
+  &__item {
+    margin-top: 21px;
+    width: 360px;
+    height: 45px;
+    border: 1px solid #A4A4A4;
+    padding-left: 17px;
+    @include font(#B1B1B1, 13px, 300);
+    box-sizing: border-box;
+  }
+
+  &__button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 1px solid #A4A4A4;
+    width: 101.408px;
+    height: 35px;
+    margin-top: 23.5px;
+    @include font(#4A4A4A, 11px, 300);
+
+  }
+
+  &__button:hover {
+    background-color: $main_color3;
+  }
+
+  &__total {
+    margin-top: 57px;
+    background-color: #F5F3F3;
+    width: 360px;
+    height: 214px;
+    padding: 34px;
+    box-sizing: border-box;
+
+    &-item {
+      display: flex;
+      flex-direction: row;
+      justify-content: flex-end;
+      margin-top: 5px;
+      margin-bottom: 12px;
+    }
+
+    &_name-small {
+      @include font(#4A4A4A, 11px, 400);
+      margin-right: 30px;
+    }
+
+    &_value-small {
+      @include font(#4A4A4A, 11px, 400);
+    }
+
+    &_name-big {
+      @include font(#222, 16px, 300);
+      margin-right: 30px;
+    }
+
+    &_value-big {
+      @include font($main_color1, 16px, 300);
+      margin-right: 3px;
+    }
+
+    &_line {
+      border: 1px solid #E2E2E2;
+      width: 275px;
+      margin-top: 9px;
+      justify-content: end;
+      /* margin-left: 42px; */
+
+    }
+
+    &_button {
+      width: 273px;
+      height: 50px;
+      background-color: $main_color1;
+      @include font(#FFF, 16px, 300);
+      @extend %flex-center;
+      margin-top: 17px;
+
+    }
+
+    &_button:hover {
+      background-color: #f43f3f;
+    }
+
   }
 }
 
@@ -317,33 +519,18 @@ a {
 }
 
 .item_menu {
-  color: #6f6e6e;
-  font-size: 14px;
-  font-family: latoblack;
-  font-style: normal;
-  font-weight: 400;
-  line-height: normal;
+  @include font(#6f6e6e, 14px, 400);
 
   &_summary {
     display: flex;
-
-    /*  &:after {
-      content: "∨";
-    } */
   }
 
-  /* &[open] &_summary::after {
-    content: "∧";
-  } */
-
   &_1 {
-    /* display: flex; */
     margin: 2px 10px;
     position: absolute;
   }
 
   &_2 {
-    /* display: flex; */
     margin: $menu_height 10px;
     position: absolute;
   }
@@ -361,17 +548,13 @@ a {
 
 .text {
   &__h1_top {
-    @extend %font-normal;
-    font-weight: 900;
-    font-size: 48px;
+    @include font($main_color2, 48px, 900);
     line-height: 58px;
   }
 
   &__h2_top {
-    @extend %font-normal;
-    font-weight: 700;
-    font-size: 32px;
-    line-height: 38px;
+    @include font($main_color2, 32px, 700);
+
   }
 
   &__red {
@@ -385,19 +568,13 @@ a {
 
 .menu {
   &_h1 {
-    color: #000;
-    font-size: 14px;
-    font-family: Lato;
-    font-style: normal;
-    font-weight: 700;
-    line-height: normal;
+    @include font(#000, 14px, 700);
+
   }
 
   &_red_h1 {
-    font-weight: 400;
-    font-size: 14px;
+    @include font($main_color1, 14px, 400);
     line-height: 17px;
-    color: $main_color1;
     margin-bottom: 12px;
     margin-top: 20px;
   }
@@ -408,12 +585,11 @@ a {
   }
 
   &_item {
-    font-weight: 400;
-    font-size: 14px;
+    @include font(#6f6e6e, 14px, 400);
     line-height: 17px;
-    color: #6f6e6e;
     margin-bottom: 12px;
     transition: transform 1s;
+
     &:hover {
       color: $main_color1;
     }
@@ -434,21 +610,17 @@ a {
   }
 
   &_h3 {
-    font-style: normal;
-    font-weight: 400;
-    font-size: 16px;
+    @include font(#ffffff, 16px, 400);
+
     line-height: 19px;
     text-align: center;
     color: #ffffff;
   }
 
   &_h2 {
-    font-style: normal;
-    font-weight: 700;
-    font-size: 24px;
+    @include font($main_color1, 24px, 700);
     line-height: 29px;
     text-align: center;
-    color: $main_color1;
   }
 
   &_item {
@@ -465,8 +637,8 @@ a {
 }
 
 .center {
-  padding-left: calc(50% - 570px);
-  padding-right: calc(50% - 570px);
+  padding-left: calc(50% - 800px);
+  padding-right: calc(50% - 800px);
 }
 
 .mid {
@@ -505,10 +677,8 @@ a {
   /*   box-shadow: 1px 1px 3px $top_font_sandvich_color; */
 
   &_item1 {
-    font-size: 14px;
-    font-family: latoblack;
-    font-weight: 300;
-    color: $main_color1;
+    @include font($main_color1, 14px, 300);
+
   }
 
   &_item2 {
@@ -527,18 +697,12 @@ a {
   }
 
   &_item3 {
-    font-size: 18px;
-    font-family: latoblack;
-    font-weight: 300;
-    color: $top_font_color;
+    @include font($top_font_color, 18px, 300);
     margin-bottom: 48.41px;
   }
 
   &_item4 {
-    font-size: 14px;
-    font-family: latoblack;
-    font-weight: 300;
-    color: $top_font_color2;
+    @include font($top_font_color2, 14px, 300);
     margin-bottom: 32.27px;
     width: 555px;
     height: 51.43px;
@@ -550,10 +714,7 @@ a {
   }
 
   &_item5 {
-    font-size: 24px;
-    font-family: latoblack;
-    font-weight: 300;
-    color: #f16d7f;
+    @include font(#f16d7f, 24px, 300);
     margin-bottom: 65.04px;
 
     &_hr {
@@ -589,19 +750,13 @@ a {
   }
 
   &_idx_p_bottom1 {
-    font-style: normal;
-    font-weight: 400;
-    font-size: 30px;
+    @include font($main_color2, 30px, 400);
     line-height: 36px;
-    color: $main_color2;
   }
 
   &_idx_p_bottom2 {
-    font-style: normal;
-    font-weight: 400;
-    font-size: 14px;
+    @include font(#9f9f9f, 14px, 400);
     line-height: 17px;
-    color: #9f9f9f;
   }
 
   &_basket {
@@ -613,21 +768,9 @@ a {
     height: 47.4px;
     width: 211px;
 
-    /* position: absolute; */
-    /*  top: 50%;
-    left: 30%;
-    right: 30%; */
-    /* &_product:hover path {
-      fill: #6f6e6e;
-      background-color: green;
-      color: yellow;
-    } */
-
     &_text {
-      font-weight: 400;
-      font-size: 14px;
+      @include font($main_color1, 14px, 400);
       line-height: 17px;
-      color: $main_color1;
       margin-left: 11.04px;
     }
 
@@ -645,9 +788,10 @@ a {
   margin: 1%;
   /*   z-index: 2; */
 
-  /* &_arround {
-    margin-top: 65px;
-  } */
+  &_arround {
+    padding-left: 8%;
+    padding-right: 8%;
+  }
 
   &_product {
     padding-bottom: 128px;
@@ -793,7 +937,7 @@ a {
 
   &_item {
     font-size: 16px;
-    font-family: latoblack;
+    font-family: Lato;
     font-style: normal;
     font-weight: 300;
     line-height: normal;

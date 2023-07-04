@@ -23,3 +23,14 @@ $widthBurgerMenu: 232px;
   font-style: normal;
   color: $main_color2;
 }
+
+
+@mixin font($color, $size, $weight) {
+  font-size: $size;
+  font-family: Lato;
+  font-style: normal;
+  font-weight: $weight;
+  line-height: normal;
+  color: $color;
+}
+
