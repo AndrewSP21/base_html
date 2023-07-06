@@ -23,6 +23,10 @@ a {
   padding: 2px 1px 0;
 }
 
+html {
+  font-size: 24px;
+}
+
 .container {
   max-width: 1600px;
   margin: 0 auto;
@@ -379,6 +383,10 @@ a {
   flex-direction: row;
 }
 
+.content-registration {
+  justify-content: space-evenly;
+}
+
 .content-form {
   display: flex;
   flex-direction: column;
@@ -393,6 +401,57 @@ a {
   line-height: normal;
   color: #222;
 }
+.content-form__registration {
+  margin-top: 40px;
+  width: 652px;
+}
+.content-form__registration-heading {
+  margin-top: 17px;
+  font-size: 1rem;
+  font-family: Lato;
+  font-style: normal;
+  font-weight: 300;
+  line-height: normal;
+  color: #000;
+}
+.content-form__registration-left {
+  width: 360px;
+  margin-left: 16.5px;
+}
+.content-form__registration-top {
+  margin-top: 22px;
+  margin-bottom: 21px;
+  font-size: 1rem;
+  font-family: Lato;
+  font-style: normal;
+  font-weight: 300;
+  line-height: normal;
+  color: #000;
+}
+.content-form__registration-item {
+  margin-bottom: 16px;
+  font-size: 1rem;
+  font-family: Lato;
+  font-style: normal;
+  font-weight: 300;
+  line-height: normal;
+  color: #000;
+}
+.content-form__radio {
+  display: flex;
+  flex-direction: row;
+  margin-top: 33.5px;
+  margin-bottom: 16px;
+  font-size: 11px;
+  font-family: Lato;
+  font-style: normal;
+  font-weight: 300;
+  line-height: normal;
+  color: #000;
+}
+.content-form__radio-button {
+  margin-left: 20px;
+}
 .content-form__item {
   margin-top: 21px;
   width: 360px;
@@ -406,6 +465,10 @@ a {
   line-height: normal;
   color: #B1B1B1;
   box-sizing: border-box;
+}
+.content-form__item-text {
+  border: 0;
+  padding-left: 0;
 }
 .content-form__button {
   display: flex;
@@ -493,6 +556,10 @@ a {
   line-height: normal;
   color: #FFF;
   margin-top: 17px;
+}
+.content-form__total_button-size {
+  width: 167px;
+  height: 50px;
 }
 .content-form__total_button:hover {
   background-color: #f43f3f;
@@ -1087,11 +1154,14 @@ a {
 }
 
 @media screen and (max-width: 768px) {
+  html {
+    font-size: 16px;
+  }
   .top {
     position: relative;
-    width: 98%;
-    top: 0;
-    left: 0;
+    /* width: 98%; */
+    /* top: 0;
+    left: 0; */
   }
   .top_text {
     justify-content: center;
@@ -1190,10 +1260,6 @@ a {
     height: 33%;
     min-height: 111px;
   }
-  /*   .top {
-    margin-top: 64px;
-    margin-bottom: 64px;
-  } */
   .bottom {
     grid-template-columns: repeat(1, 1fr);
     gap: 16px;
@@ -1228,6 +1294,15 @@ a {
     flex-direction: column;
     min-height: 143px;
   }
+  .content-registration {
+    flex-direction: column;
+  }
+  .content-basket {
+    align-items: center;
+  }
+  .content-form__registration {
+    width: 418px;
+  }
 }
 @media screen and (max-width: 376px) {
   .header {
@@ -1235,6 +1310,7 @@ a {
   }
   .Product_top_content {
     flex-direction: column;
+    justify-content: center;
   }
   .img_right_content767 {
     display: none;
@@ -1313,5 +1389,30 @@ a {
   .footer {
     flex-direction: column;
     min-height: 143px;
+  }
+  .content-registration {
+    flex-direction: column;
+  }
+  .content-basket {
+    align-items: center;
+  }
+  .content-form__registration {
+    min-width: 418px;
+  }
+  .content-form__registration-heading {
+    /* width: 300px; */
+    margin-left: 152px;
+  }
+  .content-form__registration-top {
+    margin-left: 152px;
+    margin-right: 152px;
+  }
+  .content-form__registration-item {
+    margin-left: 152px;
+    margin-right: 152px;
+  }
+  .content-form__registration-left {
+    margin-left: 8.5px;
+    margin-right: 8.5px;
   }
 }/*# sourceMappingURL=style.css.map */

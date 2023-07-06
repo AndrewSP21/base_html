@@ -19,6 +19,10 @@ a {
   padding: 2px 1px 0;
 }
 
+html {
+  font-size: 24px;
+}
+
 .container {
   max-width: $project_max_width;
   margin: 0 auto;
@@ -394,6 +398,10 @@ a {
   flex-direction: row;
 }
 
+.content-registration {
+  justify-content: space-evenly;
+}
+
 .content-form {
   display: flex;
   flex-direction: column;
@@ -402,6 +410,47 @@ a {
   &__heading {
     margin-top: 17px;
     @include font(#222, 16px, 300);
+
+  }
+
+  &__registration {
+    margin-top: 40px;
+    width: 652px;
+
+    &-heading {
+      margin-top: 17px;
+      @include font(#000, 1rem, 300);
+
+    }
+
+    &-left {
+      width: 360px;
+      margin-left: 16.5px;
+    }
+
+    &-top {
+      margin-top: 22px;
+      margin-bottom: 21px;
+      @include font(#000, 1rem, 300);
+    }
+
+    &-item {
+      margin-bottom: 16px;
+      @include font(#000, 1rem, 300);
+    }
+  }
+
+  &__radio {
+    display: flex;
+    flex-direction: row;
+    margin-top: 33.5px;
+    margin-bottom: 16px;
+
+    @include font(#000, 11px, 300);
+
+    &-button {
+      margin-left: 20px;
+    }
   }
 
   &__item {
@@ -412,6 +461,11 @@ a {
     padding-left: 17px;
     @include font(#B1B1B1, 13px, 300);
     box-sizing: border-box;
+
+    &-text {
+      border: 0;
+      padding-left: 0;
+    }
   }
 
   &__button {
@@ -482,6 +536,10 @@ a {
       @extend %flex-center;
       margin-top: 17px;
 
+      &-size {
+        width: 167px;
+        height: 50px;
+      }
     }
 
     &_button:hover {
@@ -1096,11 +1154,15 @@ a {
 }
 
 @media screen and (max-width: 768px) {
+  html {
+    font-size: 16px;
+  }
+
   .top {
     position: relative;
-    width: 98%;
-    top: 0;
-    left: 0;
+    /* width: 98%; */
+    /* top: 0;
+    left: 0; */
 
     &_text {
       justify-content: center;
@@ -1228,11 +1290,6 @@ a {
     }
   }
 
-  /*   .top {
-    margin-top: 64px;
-    margin-bottom: 64px;
-  } */
-
   .bottom {
     grid-template-columns: repeat(1, 1fr);
     gap: 16px;
@@ -1274,6 +1331,20 @@ a {
     flex-direction: column;
     min-height: 143px;
   }
+
+  .content {
+    &-registration {
+      flex-direction: column;
+    }
+
+    &-basket {
+      align-items: center;
+    }
+
+    &-form__registration {
+      width: 418px;
+    }
+  }
 }
 
 @media screen and (max-width: 376px) {
@@ -1283,6 +1354,7 @@ a {
 
   .Product_top_content {
     flex-direction: column;
+    justify-content: center;
   }
 
   .img_right_content767 {
@@ -1380,5 +1452,39 @@ a {
   .footer {
     flex-direction: column;
     min-height: 143px;
+  }
+
+  .content {
+    &-registration {
+      flex-direction: column;
+    }
+
+    &-basket {
+      align-items: center;
+    }
+
+    &-form__registration {
+      min-width: 418px;
+
+      &-heading {
+        /* width: 300px; */
+        margin-left: 152px;
+      }
+
+      &-top {
+        margin-left: 152px;
+        margin-right: 152px;
+      }
+
+      &-item {
+        margin-left: 152px;
+        margin-right: 152px;
+      }
+
+      &-left {
+        margin-left: 8.5px;
+        margin-right: 8.5px;
+      }
+    }
   }
 }
