@@ -150,21 +150,14 @@ html {
     display: flex;
     gap: 9px;
     align-items: center;
-    color: #6f6e6e;
-    font-size: 14px;
+    @include font(#6f6e6e, 14px, 400);
     font-family: Roboto;
-    font-style: normal;
-    font-weight: 400;
-    line-height: normal;
+
+
   }
 
   &__heading {
-    color: #6f6e6e;
-    font-size: 14px;
-    font-family: Lato;
-    font-style: normal;
-    font-weight: 400;
-    line-height: normal;
+    @include font(#6f6e6e, 14px, 400);
   }
 
   &__box {
@@ -185,6 +178,8 @@ html {
   gap: 16px;
   left: 490px; */
 }
+
+
 
 .box-content {
   overflow: hidden;
@@ -266,31 +261,16 @@ html {
 
 
   &_left {
-    color: $main_color1;
-    font-size: 24px;
-    font-family: Lato;
-    font-style: normal;
-    font-weight: 400;
-    line-height: normal;
+    @include font($main_color1, 24px, 400);
     padding-left: 8%;
   }
 
   &_right {
-    color: $main_color4;
-    font-size: 14px;
-    font-family: Lato;
-    font-style: normal;
-    font-weight: 300;
-    line-height: normal;
+    @include font($main_color4, 14px, 300);
     padding-right: 8%;
 
     &_2 {
-      color: $main_color1;
-      font-size: 14px;
-      font-family: Lato;
-      font-style: normal;
-      font-weight: 300;
-      line-height: normal;
+      @include font($main_color1, 14px, 300);
     }
   }
 }
@@ -324,12 +304,23 @@ html {
 .product-card {
   display: flex;
   flex-direction: row;
-  width: 652px;
-  height: 306px;
+  max-width: 652px;
+  max-height: 306px;
+  min-width: 358px;
+  min-height: 188px;
   background-color: #fff;
   box-shadow: 20px 20px 20px #EAEAEA;
   margin: 40px;
   position: relative;
+
+  &__card {
+    margin-right: 0;
+  }
+
+  &__img {
+    width: auto;
+    max-height: 100%;
+  }
 
   &__info {
     margin: 22px auto auto 31px;
@@ -337,7 +328,7 @@ html {
 
   &__title {
     margin-bottom: 42px;
-    @include font(#222, 24px, 400);
+    @include font(#222, 1rem, 400);
 
     max-width: 262px;
     padding-right: 148px;
@@ -349,16 +340,16 @@ html {
   }
 
   &__property-name {
-    @include font(#575757, 22px, 400);
+    @include font(#575757, 0.92rem, 400);
   }
 
   &__property-value {
-    @include font(#575757, 22px, 400);
+    @include font(#575757, 0.92rem, 400);
 
   }
 
   &__property-input {
-    @include font(#656565, 18px, 400);
+    @include font(#656565, 0.75rem, 400);
     border: 1px solid #EAEAEA;
     width: 44px;
     line-height: 25px;
@@ -374,14 +365,14 @@ html {
 }
 
 .button-cart {
-  margin: 32px;
+  margin: 32px 0 32px 40px;
   display: flex;
   flex-direction: row;
-  justify-content: space-around;
+  justify-content: space-between;
 
   &__item {
     @extend %flex-center;
-    @include font(#000, 14px, 300);
+    @include font(#000, 0.583rem, 300);
     width: 235px;
     height: 50px;
     border: 1px solid #A4A4A4;
@@ -391,21 +382,43 @@ html {
   &__item:hover {
     background-color: $main_color3;
   }
+
+  &__column {
+    display: flex;
+    flex-direction: row;
+    margin-left: 40px;
+    justify-content: space-between;
+  }
 }
 
 .content-basket {
   display: flex;
   flex-direction: row;
+  margin-bottom: 56px;
+  justify-content: space-around;
 }
 
 .content-registration {
+  display: flex;
+  flex-direction: row;
   justify-content: space-evenly;
+
+
 }
 
 .content-form {
   display: flex;
   flex-direction: column;
   margin: 40px;
+
+  &__form {
+    display: flex;
+    flex-direction: column;
+  }
+
+  &__cart {
+    margin-left: 0;
+  }
 
   &__heading {
     margin-top: 17px;
@@ -414,11 +427,13 @@ html {
   }
 
   &__registration {
-    margin-top: 40px;
+    margin-top: 64px;
     width: 652px;
+    /*  margin-left: 16.5px; */
+    margin-right: 8px;
 
     &-heading {
-      margin-top: 17px;
+      /* margin-top: 17px; */
       @include font(#000, 1rem, 300);
 
     }
@@ -435,10 +450,24 @@ html {
     }
 
     &-item {
+      display: flex;
+      flex-direction: row;
+      gap: 32px;
       margin-bottom: 16px;
       @include font(#000, 1rem, 300);
+
+      & svg {
+        padding-top: 10px;
+      }
+
+    }
+
+    &-over {
+      display: flex;
+      flex-direction: row;
     }
   }
+
 
   &__radio {
     display: flex;
@@ -448,7 +477,11 @@ html {
 
     @include font(#000, 11px, 300);
 
-    &-button {
+    &-button1 {
+      margin-left: 0px;
+    }
+
+    &-button2 {
       margin-left: 20px;
     }
   }
@@ -456,11 +489,23 @@ html {
   &__item {
     margin-top: 21px;
     width: 360px;
+
     height: 45px;
     border: 1px solid #A4A4A4;
     padding-left: 17px;
     @include font(#B1B1B1, 13px, 300);
     box-sizing: border-box;
+
+    &1 {
+      margin-top: 21px;
+      width: 360px;
+
+      height: 45px;
+      border: 1px solid #A4A4A4;
+      padding-left: 17px;
+      @include font(#B1B1B1, 13px, 300);
+      box-sizing: border-box;
+    }
 
     &-text {
       border: 0;
@@ -579,13 +624,18 @@ html {
 .item_menu {
   @include font(#6f6e6e, 14px, 400);
 
+
+
   &_summary {
     display: flex;
+    align-items: center;
+    gap: 10px;
   }
 
   &_1 {
     margin: 2px 10px;
-    position: absolute;
+    /*    position: absolute; */
+
   }
 
   &_2 {
@@ -602,6 +652,15 @@ html {
     margin: calc($menu_height * 3) 10px;
     position: absolute;
   }
+}
+
+.item_menu_summary-sort__box {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  min-width: max-content;
+  align-items: flex-start;
+  position: absolute;
 }
 
 .text {
@@ -1153,6 +1212,59 @@ html {
   }
 }
 
+@media screen and (max-width: 1150px) {
+
+  .content-card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .content-form {
+    /* align-items: center; */
+
+    &__form {
+      display: flex;
+      flex-direction: column;
+      /* align-items: center; */
+    }
+
+    &__total {
+      margin-top: 35px;
+    }
+
+    /*  &__cart {
+      display: flex;
+      flex-direction: row;
+      justify-content: space-around;
+      margin-right: 0;
+    }
+ */
+    &__registration-top {
+      margin-right: 16px;
+    }
+
+    &__registration-left {
+      margin-right: 23.5px;
+    }
+  }
+
+  .product-card {
+    &__card {
+      margin-left: 0;
+      margin-right: 0;
+    }
+  }
+
+  .button-cart__column {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin-left: 40px;
+    gap: 2rem;
+  }
+}
+
 @media screen and (max-width: 768px) {
   html {
     font-size: 16px;
@@ -1160,9 +1272,9 @@ html {
 
   .top {
     position: relative;
-    /* width: 98%; */
-    /* top: 0;
-    left: 0; */
+    top: 0;
+    width: auto;
+    left: 0;
 
     &_text {
       justify-content: center;
@@ -1172,6 +1284,10 @@ html {
   .product_middle_item2 {
     width: auto;
     height: auto;
+  }
+
+  .Product_top_content_left {
+    padding-left: 16px;
   }
 
   .text {
@@ -1197,10 +1313,84 @@ html {
     &_item_size {
       max-width: 98%;
     }
+
+    &_arround {
+      margin-top: 100px;
+    }
   }
+
+  .bottom :nth-child(n+9) {
+    visibility: hidden;
+    height: 0;
+  }
+
+  .button-cart {
+    &__item {
+      width: 235px;
+      height: 50px;
+      margin-top: 22px;
+      font-size: 14px;
+    }
+  }
+
 
   .advantage {
     flex-direction: column;
+  }
+
+  .content-registration {
+    align-items: baseline;
+    align-items: center;
+  }
+
+  .content-form {
+    display: block;
+
+    /* &__radio {
+      margin-left: -174px;
+    } */
+
+    &__cart {
+      display: flex;
+      flex-direction: row;
+      margin: 80px 16.51px;
+      justify-content: space-between;
+    }
+
+    &__registration {
+      width: auto;
+    }
+
+    &__registration-top {
+      width: 354px;
+    }
+
+    &__registration-left {
+      margin-left: 16.5px;
+    }
+
+    &__registration-item svg {
+      padding-top: 5px;
+    }
+
+    /* &__item {
+      width: 90vw;
+      min-width: 358px;
+
+    } */
+  }
+
+  .container {
+    margin-top: 59px;
+
+    &-registration {
+      margin-top: 0;
+    }
+  }
+
+  .content-basket {
+    display: block;
+    margin-bottom: 0;
   }
 
   .subscribe {
@@ -1211,15 +1401,106 @@ html {
       margin: 0 0 48px 0;
     }
   }
+
+  .product-card {
+    max-width: none;
+    width: 98%;
+
+    &__card {
+
+      margin: 0 auto 40px auto;
+    }
+
+    &__info {
+      margin: 22px auto auto 17.02px;
+    }
+
+    &__title {
+      font-size: 24px;
+    }
+
+    &__property {
+      &-name {
+        font-size: 22px;
+      }
+
+      &-value {
+        font-size: 22px;
+      }
+
+      &-input {
+        font-size: 18px;
+      }
+    }
+
+    &__img-inside {
+      width: auto;
+      max-height: 100%;
+      object-fit: contain;
+    }
+  }
 }
 
-@media screen and (min-width: 376px) and (max-width: 767px) {
+@media screen and (min-width: 377px) and (max-width: 767px) {
+
+  html {
+    font-size: 16px;
+  }
+
   .header {
     height: 74px;
   }
 
   .img_right_content767 {
     display: none;
+  }
+
+  .product-card {
+    /*  height: 188px;
+    width: 358px; */
+
+    &__card {
+      margin-bottom: 0;
+      margin-top: 32px;
+    }
+
+    &__sign-close {
+      width: 9.88px;
+      height: 11px;
+      top: 17.2px;
+      right: 12.08px;
+    }
+
+    &__info {
+      margin-top: 13.52px;
+    }
+
+    &__title {
+      padding-right: 53.26px;
+      font-size: 16px;
+    }
+
+
+    &__property {
+      &-name {
+        font-size: 14px;
+      }
+
+      &-value {
+        font-size: 14px;
+      }
+
+      &-input {
+        font-size: 10px;
+      }
+    }
+
+    &__item {
+      font-size: 12px;
+    }
+
+
+
   }
 
   .top {
@@ -1314,6 +1595,19 @@ html {
     min-width: 359px;
   }
 
+  .button-cart {
+    &__column {
+      margin-top: 30px;
+      margin-left: 8px;
+      gap: 48px;
+    }
+
+    &__item {
+      box-sizing: border-box;
+      font-size: 12px;
+    }
+  }
+
   .buttom_bottom {
     margin-bottom: 0;
   }
@@ -1342,23 +1636,114 @@ html {
     }
 
     &-form__registration {
-      width: 418px;
+      /* width: 350px; */
+      margin-left: 16.5px;
     }
+
+    &-form {
+      &__item {
+        width: 100%;
+      }
+
+      &__form {
+        width: 98%;
+      }
+
+      &__total {
+        width: 98%;
+
+        &_line {
+          width: 98%;
+        }
+
+        &_button-over {
+          display: flex;
+          justify-content: center;
+
+        }
+      }
+
+      &__cart {
+        flex-direction: column;
+      }
+    }
+
+
+
   }
+
 }
 
 @media screen and (max-width: 376px) {
   .header {
     height: 74px;
+    justify-content: space-around;
+
+    &__right_content {
+      width: auto;
+      gap: 0;
+    }
   }
 
   .Product_top_content {
     flex-direction: column;
-    justify-content: center;
+    justify-content: space-evenly;
+
+    &_left {
+      padding-left: 0;
+    }
+
+    &_right {
+      padding-right: 0;
+    }
   }
 
   .img_right_content767 {
     display: none;
+  }
+
+  .product-card {
+    height: 188px;
+    width: 358px;
+
+    &__card {
+      margin-bottom: 0;
+      margin-top: 32px;
+    }
+
+    &__sign-close {
+      width: 9.88px;
+      height: 11px;
+      top: 17.2px;
+      right: 12.08px;
+    }
+
+    &__info {
+      margin-top: 13.52px;
+    }
+
+
+    &__title {
+      padding-right: 53.26px;
+      font-size: 16px;
+    }
+
+
+    &__property {
+      &-name {
+        font-size: 14px;
+      }
+
+      &-value {
+        font-size: 14px;
+      }
+
+      &-input {
+        font-size: 10px;
+      }
+    }
+
+
   }
 
   .top_content {
@@ -1410,31 +1795,95 @@ html {
     }
   }
 
+  .filter {
+
+    width: auto;
+
+    &__summary {
+      padding-left: 0;
+    }
+
+    &__heading {
+      visibility: hidden;
+      width: 0;
+
+      &-logo {
+        width: 37.5px;
+        height: 25px;
+      }
+    }
+
+    &-sort {
+      margin-left: 8px;
+      margin-right: 8px;
+      display: flex;
+      justify-content: space-between;
+    }
+  }
+
+  .sort__heading {
+    font-size: 12px;
+  }
+
   .top {
-    margin-top: 64px;
+    margin-top: 0;
     margin-bottom: 64px;
+    top: 0;
+    left: 0;
+    position: relative;
+    width: auto;
+    padding-top: 64px;
+
     /* width: 100%;
     padding: 0 8px;
     margin: 0 auto; */
+    &_item4 {
+      font-size: 14px;
+      padding: 0 25px 32.21px;
+    }
+
+    &_item5_hr {
+      width: 175px;
+    }
   }
 
   .bottom {
     grid-template-columns: repeat(1, 1fr);
     gap: 16px;
     max-width: 359px;
-    min-width: 359px;
-    width: 100%;
+    /*     min-width: 359px;
+    width: 100%; */
     padding: 0 8px;
     margin: 0 auto;
 
     &_bottom {
       margin-bottom: 0;
     }
+
+    &_arround {
+      padding-left: 8px;
+      padding-right: 3px;
+    }
   }
 
   .butt_bot {
     margin: 40.61px auto 85px auto;
     min-width: 359px;
+  }
+
+  .button-cart {
+    &__column {
+      margin-top: 30px;
+      margin-left: 8px;
+      gap: 9px;
+
+    }
+
+    &__item {
+      box-sizing: border-box;
+      font-size: 12px;
+      width: 175px;
+    }
   }
 
   .subscribe {
@@ -1463,27 +1912,49 @@ html {
       align-items: center;
     }
 
-    &-form__registration {
-      min-width: 418px;
+    &-form__item1 {
+      width: $widthRegistration375;
+    }
 
-      &-heading {
-        /* width: 300px; */
-        margin-left: 152px;
+    &-form {
+      &__cart {
+        flex-direction: column;
       }
 
+      &__item {
+        width: auto;
+      }
+
+      &__total {
+        width: auto;
+      }
+    }
+
+    &-form__registration {
+      /*  box-sizing: border-box; */
+      width: $widthRegistration375;
+      margin-top: 0;
+
+      &-heading {
+        width: auto;
+      }
+
+      &-item-over {
+        width: auto;
+      }
+
+
       &-top {
-        margin-left: 152px;
-        margin-right: 152px;
+        width: auto;
+        margin-right: 0;
       }
 
       &-item {
-        margin-left: 152px;
-        margin-right: 152px;
+        width: auto;
       }
 
       &-left {
-        margin-left: 8.5px;
-        margin-right: 8.5px;
+        width: $widthRegistration375;
       }
     }
   }

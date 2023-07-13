@@ -70,10 +70,13 @@
 
 
         <div class="content-card">
-          <div class="product-card">
-            <img src="img/product1.png" alt="product-photo" class="product-card__img">
+          <div class="product-card product-card__card">
+
+            <div class="product-card__img">
+              <img src="img/product1.png" alt="product-photo" class="product-card__img-inside">
+            </div>
             <div class="product-card__info">
-              <p class="product-card__title">MANGO PEOPLE T-SHIRT</p>
+              <p class="product-card__title">MANGO PEOPLE<br>T-SHIRT</p>
               <div class="product-card__property">
                 <p class="product-card__property-name">Price: &ensp;</p>
                 <p class="product-card__property-value text__red">$300</p>
@@ -100,10 +103,13 @@
             </svg>
 
           </div>
-          <div class="product-card">
-            <img src="img/product2.png" alt="product-photo" class="product-card__img">
+          <div class="product-card product-card__card">
+            <div class="product-card__img">
+              <img src="img/product2.png" alt="product-photo" class="product-card__img-inside">
+            </div>
+
             <div class="product-card__info">
-              <p class="product-card__title">MANGO PEOPLE T-SHIRT</p>
+              <p class="product-card__title">MANGO PEOPLE<br>T-SHIRT</p>
               <div class="product-card__property">
                 <p class="product-card__property-name">Price: &ensp;</p>
                 <p class="product-card__property-value text__red">$300</p>
@@ -130,18 +136,22 @@
             </svg>
 
           </div>
-          <div class="button-cart">
+          <div class="button-cart__column">
             <div class="button-cart__item">CLEAR SHOPPING CART</div>
             <div class="button-cart__item">CONTINUE SHOPPING</div>
+
           </div>
         </div>
 
-        <div class="content-form">
-          <p class="content-form__heading">SHIPPING ADRESS</p>
-          <input type="text" class="content-form__item" placeholder="Bangladesh">
-          <input type="text" class="content-form__item" placeholder="State">
-          <input type="text" class="content-form__item" placeholder="Postcode / Zip">
-          <div class="content-form__button">GET A QUOTE</div>
+        <div class="content-form content-form__cart">
+          <div class="content-form__form">
+            <p class="content-form__heading">SHIPPING ADRESS</p>
+            <input type="text" class="content-form__item" placeholder="Bangladesh">
+            <input type="text" class="content-form__item" placeholder="State">
+            <input type="text" class="content-form__item" placeholder="Postcode / Zip">
+            <div class="content-form__button">GET A QUOTE</div>
+          </div>
+
           <div class="content-form__total">
             <div class="content-form__total-item">
               <div class="content-form__total_name-small">SUB TOTAL</div>
@@ -154,8 +164,12 @@
 
 
             <div class="content-form__total_line"> </div>
-            <div class="content-form__total_button">PROCEED TO CHECKOUT</div>
+            <div class="content-form__total_button-over">
+              <div class="content-form__total_button">PROCEED TO CHECKOUT</div>
+            </div>
+
           </div>
+
         </div>
 
 
