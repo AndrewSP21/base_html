@@ -1229,17 +1229,17 @@ html {
       /* align-items: center; */
     }
 
-    &__total {
+    /* &__total {
       margin-top: 35px;
-    }
+    } */
 
-    /*  &__cart {
-      display: flex;
-      flex-direction: row;
-      justify-content: space-around;
+    &__cart {
+      // display: flex;
+      // flex-direction: row;
+      // justify-content: space-around;
       margin-right: 0;
     }
- */
+
     &__registration-top {
       margin-right: 16px;
     }
@@ -1434,7 +1434,7 @@ html {
     }
 
     &__img-inside {
-      width: auto;
+      width: 83%;
       max-height: 100%;
       object-fit: contain;
     }
@@ -1605,6 +1605,7 @@ html {
     &__item {
       box-sizing: border-box;
       font-size: 12px;
+      width: 180px;
     }
   }
 

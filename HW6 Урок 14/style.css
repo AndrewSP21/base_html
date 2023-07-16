@@ -1229,21 +1229,17 @@ html {
   }
   .content-form {
     /* align-items: center; */
-    /*  &__cart {
-         display: flex;
-         flex-direction: row;
-         justify-content: space-around;
-         margin-right: 0;
-       }
-    */
+    /* &__total {
+      margin-top: 35px;
+    } */
   }
   .content-form__form {
     display: flex;
     flex-direction: column;
     /* align-items: center; */
   }
-  .content-form__total {
-    margin-top: 35px;
+  .content-form__cart {
+    margin-right: 0;
   }
   .content-form__registration-top {
     margin-right: 16px;
@@ -1390,7 +1386,7 @@ html {
     font-size: 18px;
   }
   .product-card__img-inside {
-    width: auto;
+    width: 83%;
     max-height: 100%;
     -o-object-fit: contain;
        object-fit: contain;
@@ -1521,6 +1517,7 @@ html {
   .button-cart__item {
     box-sizing: border-box;
     font-size: 12px;
+    width: 180px;
   }
   .buttom_bottom {
     margin-bottom: 0;
