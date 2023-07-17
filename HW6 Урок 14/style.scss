@@ -17,6 +17,22 @@ a {
   outline: none;
   text-decoration: none;
   padding: 2px 1px 0;
+
+  &:link {
+    color: white;
+  }
+
+  &:alink {
+    color: white;
+  }
+
+  &:visited {
+    color: white;
+  }
+
+  &:active {
+    color: white;
+  }
 }
 
 html {
